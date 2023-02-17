@@ -22,7 +22,7 @@ log = "0.4"
 [dependencies.env_logger]
 version = "0.10"
 default-features = false
-features = ["termcolor"]
+features = ["color"]
 
 [features]
 default = ["humantime", "regex"]
