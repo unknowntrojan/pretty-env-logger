@@ -72,6 +72,7 @@ pub fn init() {
 /// # Panics
 ///
 /// This function fails to set the global logger if one has already been set.
+#[cfg(feature = "humantime")]
 pub fn init_timed() {
     try_init_timed().unwrap();
 }
@@ -98,6 +99,7 @@ pub fn try_init() -> Result<(), log::SetLoggerError> {
 /// # Errors
 ///
 /// This function fails to set the global logger if one has already been set.
+#[cfg(feature = "humantime")]
 pub fn try_init_timed() -> Result<(), log::SetLoggerError> {
     try_init_timed_custom_env("RUST_LOG")
 }
