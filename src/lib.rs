@@ -145,6 +145,7 @@ pub fn try_init_custom_env(environment_variable_name: &str) -> Result<(), log::S
 /// # Errors
 ///
 /// This function fails to set the global logger if one has already been set.
+#[cfg(feature = "humantime")]
 pub fn try_init_timed_custom_env(
     environment_variable_name: &str,
 ) -> Result<(), log::SetLoggerError> {
@@ -191,6 +192,7 @@ pub fn formatted_builder() -> Builder {
 /// This method will return a colored and time formatted `env_logger::Builder`
 /// for further customization. Refer to env_logger::Build crate documentation
 /// for further details and usage.
+#[cfg(feature = "humantime")]
 pub fn formatted_timed_builder() -> Builder {
     let mut builder = Builder::new();
 
