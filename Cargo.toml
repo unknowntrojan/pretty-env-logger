@@ -25,7 +25,6 @@ default-features = false
 features = ["termcolor"]
 
 [features]
-default = ["atty", "humantime", "regex"]
-atty = ["env_logger/atty"]
+default = ["humantime", "regex"]
 humantime = ["env_logger/humantime"]
 regex = ["env_logger/regex"]
